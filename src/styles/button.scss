@@ -1,6 +1,3 @@
-// não entendi onde que ficam aqueles botões de "text" no style guide 😩
-// estilizei na linha 33: button__dunno
-
 $dark-pink: var(--color-primary-1);
 $light-pink: var(--color-primary-2);
 $dark-grey: #212529;
@@ -20,6 +17,7 @@ $light-grey: #f8f9fa;
 
 .button__default {
   @include common-properties;
+  width: 100%;
   height: 3rem;
   padding: 0 1.25rem;
   color: $light-grey;
@@ -31,23 +29,23 @@ $light-grey: #f8f9fa;
   }
 }
 
-.button__dunno {
-  @include common-properties($bg-color: $medium-light-grey);
-  height: 2.5rem;
-  padding: 0 0.9375rem;
-  color: $dark-grey;
-  border-radius: 0.5rem;
-  font-weight: 600;
+// .button__dunno {
+//   @include common-properties($bg-color: $medium-light-grey);
+//   height: 2.5rem;
+//   padding: 0 0.9375rem;
+//   color: $dark-grey;
+//   border-radius: 0.5rem;
+//   font-weight: 600;
 
-  &:hover {
-    color: $medium-light-grey;
-    background-color: $dark-grey;
-  }
+//   &:hover {
+//     color: $medium-light-grey;
+//     background-color: $dark-grey;
+//   }
 
-  &:active {
-    background-color: $dark-pink;
-  }
-}
+//   &:active {
+//     background-color: $dark-pink;
+//   }
+// }
 
 .button__delete {
   @include common-properties($bg-color: $medium-light-grey);

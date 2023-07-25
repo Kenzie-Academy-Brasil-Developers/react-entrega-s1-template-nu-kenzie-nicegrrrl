@@ -1,0 +1,11 @@
+.form {
+  height: 434px;
+  padding: 30px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.flexBox {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

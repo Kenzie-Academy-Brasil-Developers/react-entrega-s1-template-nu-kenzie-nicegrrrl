@@ -1,0 +1,13 @@
+@mixin flex($gap: 12px) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+.inputSection {
+  @include flex($gap: 0.5rem);
+}
+
+.span {
+  color: var(--color-grey-2);
+}

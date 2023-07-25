@@ -1,3 +1,5 @@
+import styles from "./style.module.scss";
+
 export const FinancialSummarySection = () => {
   return (
     <section>

@@ -1,0 +1,9 @@
+.inputSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.spanInput {
+  color: var(--color-grey-2) !important;
+}
