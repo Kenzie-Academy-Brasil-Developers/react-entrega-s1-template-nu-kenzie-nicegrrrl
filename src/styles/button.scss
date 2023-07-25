@@ -1,0 +1,64 @@
+// não entendi onde que ficam aqueles botões de "text" no style guide 😩
+// estilizei na linha 33: button__dunno
+
+$dark-pink: var(--color-primary-1);
+$light-pink: var(--color-primary-2);
+$dark-grey: #212529;
+$medium-dark-grey: #868e96;
+$medium-light-grey: #e9ecef;
+$light-grey: #f8f9fa;
+
+@mixin common-properties($bg-color: $dark-pink) {
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $bg-color;
+  font-family: var(--font-primary);
+  transition: all 150ms ease-in-out;
+}
+
+.button__default {
+  @include common-properties;
+  height: 3rem;
+  padding: 0 1.25rem;
+  color: $light-grey;
+  border-radius: 0.5rem;
+  font-weight: 600;
+
+  &:hover {
+    background-color: $light-pink;
+  }
+}
+
+.button__dunno {
+  @include common-properties($bg-color: $medium-light-grey);
+  height: 2.5rem;
+  padding: 0 0.9375rem;
+  color: $dark-grey;
+  border-radius: 0.5rem;
+  font-weight: 600;
+
+  &:hover {
+    color: $medium-light-grey;
+    background-color: $dark-grey;
+  }
+
+  &:active {
+    background-color: $dark-pink;
+  }
+}
+
+.button__delete {
+  @include common-properties($bg-color: $medium-light-grey);
+  height: 1.1875rem;
+  padding: 0 0.5625rem;
+  color: $dark-grey;
+  border-radius: 0.125rem;
+  font-weight: 400;
+
+  &:hover {
+    color: $medium-light-grey;
+    background-color: $dark-grey;
+  }
+}

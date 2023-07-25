@@ -11,7 +11,7 @@ export const FinancialSummarySection = () => {
             </div>
             <div>
               <p>R$ 6.660,00</p>
-              <button>Excluir</button>
+              <button className="button__delete">Excluir</button>
             </div>
           </li>
           <li>
@@ -21,7 +21,7 @@ export const FinancialSummarySection = () => {
             </div>
             <div>
               <p>R$ 6.660,00</p>
-              <button>Excluir</button>
+              <button className="button__delete">Excluir</button>
             </div>
           </li>
         </ul>

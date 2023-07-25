@@ -19,7 +19,9 @@ export const FormSection = () => {
               <option value="">Saída</option>
             </select>
           </div>
-          <button type="submit">Inserir valor</button>
+          <button type="submit" className="button__default">
+            Inserir valor
+          </button>
         </div>
       </form>
     </section>

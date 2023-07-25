@@ -1,0 +1,40 @@
+%common-properties {
+  font-family: var(--font-primary);
+  line-height: 150%;
+}
+
+.title1 {
+  @extend %common-properties;
+  font-size: 38px;
+  font-weight: 900;
+}
+
+.title2 {
+  @extend %common-properties;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.title3 {
+  @extend %common-properties;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.title4 {
+  @extend %common-properties;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.headline {
+  @extend %common-properties;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.bodyTypography {
+  @extend %common-properties;
+  font-size: 12px;
+  font-weight: 400;
+}

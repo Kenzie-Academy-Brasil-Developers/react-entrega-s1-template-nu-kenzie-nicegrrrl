@@ -1,10 +1,12 @@
-import logo from "../../assets/logo.svg";
+import styles from "./style.module.scss";
 
 export const Header = () => {
   return (
-    <header>
+    <header className={styles.header}>
       <div className="container">
-        <img src={logo} alt="NuKenzie logo" />
+        <h1 className={`title1 ${styles.logo}`}>
+          <span>Nu</span> Kenzie
+        </h1>
       </div>
     </header>
   );
