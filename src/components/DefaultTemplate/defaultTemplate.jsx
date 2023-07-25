@@ -4,7 +4,9 @@ export const DefaultTemplate = ({ children }) => {
   return (
     <>
       <Header />
-      <main>{children}</main>
+      <div className="container">
+        <main>{children}</main>
+      </div>
     </>
   );
 };

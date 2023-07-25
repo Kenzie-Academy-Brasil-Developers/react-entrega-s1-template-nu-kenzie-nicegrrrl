@@ -6,7 +6,7 @@ export const Select = ({ label, id }) => {
       <label htmlFor={id} className="bodyTypography">
         {label}
       </label>
-      <select name={id} id={id}>
+      <select name={id} id={id} className="input">
         <Option value="input" text="Entrada" />
         <Option value="output" text="Saída" />
       </select>

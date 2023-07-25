@@ -1,7 +1,7 @@
 %common-properties {
   font-family: var(--font-primary);
   line-height: 150%;
-  color: var(--color-grey-1s);
+  color: var(--color-grey-1);
 }
 
 .title1 {
@@ -20,6 +20,10 @@
   @extend %common-properties;
   font-size: 16px;
   font-weight: 700;
+
+  &.pink {
+    color: var(--color-primary-1);
+  }
 }
 
 .title4 {

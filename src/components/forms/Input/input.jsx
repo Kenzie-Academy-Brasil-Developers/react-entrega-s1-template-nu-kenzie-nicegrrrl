@@ -13,7 +13,7 @@ export const Input = ({
         {label}
       </label>
       <input
-        className="bodyTypography"
+        className="bodyTypography input"
         type={type}
         name={id}
         id={id}
