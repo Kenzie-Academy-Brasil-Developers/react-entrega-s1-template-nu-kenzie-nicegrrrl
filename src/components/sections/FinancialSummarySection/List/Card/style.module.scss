@@ -1,0 +1,28 @@
+%flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  height: 87px;
+  padding: 12px 20px;
+  background-color: var(--color-grey-4);
+  border-left: 4px solid var(--color-secondary);
+  border-radius: 4px;
+}
+
+.flexBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flexLeft {
+  @extend %flexColumn;
+  gap: 14px;
+}
+
+.flexRight {
+  @extend %flexColumn;
+  gap: 8px;
+}
