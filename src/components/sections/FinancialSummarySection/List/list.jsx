@@ -1,7 +1,7 @@
 import { Card } from "./Card/card";
 import styles from "./style.module.scss";
 
-export const List = ({ transactionsList }) => {
+export const List = ({ transactionsList, removeTransaction }) => {
   return (
     <ul className={styles.list}>
       {transactionsList.map((transaction) => (
@@ -10,6 +10,8 @@ export const List = ({ transactionsList }) => {
           money={transaction.money}
           category={transaction.category}
           key={transaction.id}
+          id={transaction.id}
+          removeTransaction={removeTransaction}
         />
       ))}
 

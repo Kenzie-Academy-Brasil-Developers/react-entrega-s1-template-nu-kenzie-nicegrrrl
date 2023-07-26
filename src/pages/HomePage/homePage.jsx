@@ -15,6 +15,13 @@ export const HomePage = () => {
     setTransactionsList([...transactionsList, newTransaction]);
   };
 
+  const removeTransaction = (removeId) => {
+    const newTransactionList = transactionsList.filter(
+      (transaction) => transaction.id !== removeId
+    );
+    setTransactionsList(newTransactionList);
+  };
+
   return (
     <DefaultTemplate>
       <div className={styles.sectionContainer}>
@@ -23,7 +30,10 @@ export const HomePage = () => {
           <TotalAmountSection />
         </div>
         <div className={styles.detailedInfo}>
-          <FinancialSummarySection transactionsList={transactionsList} />
+          <FinancialSummarySection
+            transactionsList={transactionsList}
+            removeTransaction={removeTransaction}
+          />
         </div>
       </div>
     </DefaultTemplate>

@@ -1,6 +1,12 @@
 import styles from "./style.module.scss";
 
-export const Card = ({ description, money, category }) => {
+export const Card = ({
+  id,
+  description,
+  money,
+  category,
+  removeTransaction,
+}) => {
   return (
     <li className={styles.card}>
       <div className={styles.flexBox}>
@@ -10,7 +16,12 @@ export const Card = ({ description, money, category }) => {
         </div>
         <div className={styles.flexRight}>
           <p className="bodyTypography">{money}</p>
-          <button className="button__delete">Excluir</button>
+          <button
+            className="button__delete"
+            onClick={() => removeTransaction(id)}
+          >
+            Excluir
+          </button>
         </div>
       </div>
     </li>
