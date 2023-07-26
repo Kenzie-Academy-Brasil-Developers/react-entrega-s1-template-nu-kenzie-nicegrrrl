@@ -1,15 +1,15 @@
 import styles from "./style.module.scss";
 
-export const Card = ({ financialType }) => {
+export const Card = ({ description, money, category }) => {
   return (
     <li className={styles.card}>
       <div className={styles.flexBox}>
         <div className={styles.flexLeft}>
-          <h3 className="title3">Salário - Mês Dezembro</h3>
-          <span className="bodyTypography">{financialType}</span>
+          <h3 className="title3">{description}</h3>
+          <span className="bodyTypography">{category}</span>
         </div>
         <div className={styles.flexRight}>
-          <p className="bodyTypography">R$ 6.660,00</p>
+          <p className="bodyTypography">{money}</p>
           <button className="button__delete">Excluir</button>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import { Option } from "../Option/option";
 
-export const Select = ({ label, id }) => {
+export const Select = ({ label, id, value, setValue }) => {
   return (
     <div className="inputSection">
       <label htmlFor={id} className="bodyTypography">

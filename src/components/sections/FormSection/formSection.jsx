@@ -1,10 +1,10 @@
 import { Form } from "../../forms/Form/form";
 
-export const FormSection = () => {
+export const FormSection = ({ addTransaction }) => {
   return (
     <section>
       {/* <div className="container"> */}
-      <Form />
+      <Form addTransaction={addTransaction} />
       {/* </div> */}
     </section>
   );

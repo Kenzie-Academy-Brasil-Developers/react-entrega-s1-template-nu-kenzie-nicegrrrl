@@ -3,15 +3,18 @@ import { Input } from "../Input/input";
 import { Select } from "../Select/select";
 import styles from "./style.module.scss";
 
-export const Form = () => {
+export const Form = ({ addTransaction }) => {
   const [description, setDescription] = useState("");
   const [money, setMoney] = useState("");
+  const [category, setCategory] = useState("");
 
   const submit = (event) => {
     event.preventDefault();
-    console.log({ description, money });
+    // console.log({ description, money, category });
+    addTransaction({ description, money, category });
     setDescription("");
     setMoney("");
+    setCategory("");
   };
 
   return (
@@ -35,7 +38,12 @@ export const Form = () => {
           setValue={setMoney}
           span="Ex: 1"
         />
-        <Select label="Tipo de valor" id="select" />
+        <Select
+          label="Tipo de valor"
+          id="category"
+          value={category}
+          setValue={setCategory}
+        />
         <button type="submit" className="button__default">
           Inserir valor
         </button>
