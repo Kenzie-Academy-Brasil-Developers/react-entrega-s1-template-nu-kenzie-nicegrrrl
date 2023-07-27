@@ -20,31 +20,10 @@ export const HomePage = () => {
     setTransactionsList(newTransactionList);
   };
 
-  const sumInputValues = (list) => {
-    const inputValuesList = list.filter((item) => item.category === "entrada");
-    const sum = inputValuesList.reduce((accumulator, currentValue) => {
-      return accumulator + currentValue.money;
-    }, 0);
-    return sum;
-  };
-
-  const sumOutputValues = (list) => {
-    const inputValuesList = list.filter((item) => item.category === "saida");
-    const sum = inputValuesList.reduce((accumulator, currentValue) => {
-      return accumulator + currentValue.money;
-    }, 0);
-    return sum;
-  };
-
-  const calcTotalAmount = () => {
-    const sumInputs = sumInputValues(transactionsList);
-    const sumOutputs = sumOutputValues(transactionsList);
-
-    const total = sumInputs - sumOutputs;
-    return total;
-  };
-
-  const totalAmount = calcTotalAmount();
+  const totalAmount = transactionsList.reduce(
+    (accumulator, transaction) => accumulator + transaction.money,
+    0
+  );
 
   return (
     <DefaultTemplate>

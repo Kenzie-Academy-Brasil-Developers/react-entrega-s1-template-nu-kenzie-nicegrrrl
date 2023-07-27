@@ -29,7 +29,7 @@ export const Card = ({
         </div>
         <div className={styles.flexValue}>
           <p className="bodyTypography">
-            {money.toLocaleString("pt-BR", {
+            {Math.abs(money).toLocaleString("pt-BR", {
               style: "currency",
               currency: "BRL",
             })}

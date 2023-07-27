@@ -10,9 +10,15 @@ export const Form = ({ addTransaction }) => {
 
   const submit = (event) => {
     event.preventDefault();
+    let moneyValue = Number(money);
+
+    if (category === "saida") {
+      moneyValue *= -1;
+    }
+
     addTransaction({
       description: description,
-      money: Number(money),
+      money: moneyValue,
       category: category,
     });
     setDescription("");
