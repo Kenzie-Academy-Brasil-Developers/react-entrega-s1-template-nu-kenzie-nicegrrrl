@@ -6,15 +6,16 @@ import styles from "./style.module.scss";
 export const Form = ({ addTransaction }) => {
   const [description, setDescription] = useState("");
   const [money, setMoney] = useState("");
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState("entrada");
+
+  console.log(category);
 
   const submit = (event) => {
     event.preventDefault();
-    // console.log({ description, money, category });
     addTransaction({ description, money, category });
     setDescription("");
     setMoney("");
-    setCategory("");
+    setCategory("entrada");
   };
 
   return (
@@ -43,7 +44,10 @@ export const Form = ({ addTransaction }) => {
           id="category"
           value={category}
           setValue={setCategory}
-        />
+        >
+          <option value="entrada">Entrada</option>
+          <option value="saida">Saída</option>
+        </Select>
         <button type="submit" className="button__default">
           Inserir valor
         </button>

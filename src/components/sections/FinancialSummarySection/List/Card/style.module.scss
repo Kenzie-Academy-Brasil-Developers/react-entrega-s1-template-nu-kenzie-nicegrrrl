@@ -4,25 +4,57 @@
 }
 
 .card {
-  height: 87px;
+  height: 156px;
+
   padding: 12px 20px;
   background-color: var(--color-grey-4);
-  border-left: 4px solid var(--color-secondary);
   border-radius: 4px;
+
+  &.input {
+    border-left: 4px solid var(--color-secondary);
+  }
+
+  &.output {
+    border-left: 4px solid var(--color-grey-3);
+  }
 }
 
 .flexBox {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  // justify-content: space-between;
+  align-items: flex-start;
 }
 
-.flexLeft {
+.flexDescription {
   @extend %flexColumn;
   gap: 14px;
 }
 
-.flexRight {
+.flexValue {
   @extend %flexColumn;
+  align-items: center;
   gap: 8px;
+
+  p {
+    padding: 10px 0;
+  }
+}
+
+@media (min-width: 920px) {
+  .card {
+    height: 87px;
+  }
+
+  .flexBox {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .flexValue {
+    p {
+      padding: 0;
+    }
+  }
 }

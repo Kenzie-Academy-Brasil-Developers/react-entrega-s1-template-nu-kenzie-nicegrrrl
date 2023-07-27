@@ -8,7 +8,7 @@ import styles from "./style.module.scss";
 export const HomePage = () => {
   const [transactionsList, setTransactionsList] = useState([]);
 
-  console.log(transactionsList);
+  // console.log(transactionsList);
 
   const addTransaction = (formData) => {
     const newTransaction = { ...formData, id: crypto.randomUUID() };
