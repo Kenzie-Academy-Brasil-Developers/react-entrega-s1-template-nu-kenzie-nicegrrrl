@@ -7,14 +7,19 @@ export const FinancialSummarySection = ({
 }) => {
   return (
     <section className={styles.section}>
-      <h2 className="title3">Resumo Financeiro</h2>
       {transactionsList.length > 0 ? (
-        <List
-          transactionsList={transactionsList}
-          removeTransaction={removeTransaction}
-        />
+        <>
+          <h2 className="title3">Resumo Financeiro 🤑</h2>
+          <List
+            transactionsList={transactionsList}
+            removeTransaction={removeTransaction}
+          />
+        </>
       ) : (
-        <p className="title2">Você ainda não possui nenhum lançamento</p>
+        <>
+          <h2 className="title3">Resumo Financeiro 🙁</h2>
+          <p className="title2">Você ainda não possui nenhum lançamento</p>
+        </>
       )}
     </section>
   );
