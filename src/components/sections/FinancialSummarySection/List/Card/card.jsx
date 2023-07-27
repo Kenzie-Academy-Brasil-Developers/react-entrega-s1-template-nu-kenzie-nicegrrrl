@@ -9,7 +9,7 @@ export const Card = ({
 }) => {
   const categories = {
     entrada: "Entrada",
-    saida: "Saída",
+    despesa: "Despesa",
   };
 
   return (

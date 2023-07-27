@@ -12,7 +12,7 @@ export const Form = ({ addTransaction }) => {
     event.preventDefault();
     let moneyValue = Number(money);
 
-    if (category === "saida") {
+    if (category === "despesa") {
       moneyValue *= -1;
     }
 
@@ -56,7 +56,7 @@ export const Form = ({ addTransaction }) => {
           setValue={setCategory}
         >
           <option value="entrada">Entrada</option>
-          <option value="saida">Saída</option>
+          <option value="despesa">Despesa</option>
         </Select>
         <button type="submit" className="button__default">
           Inserir valor

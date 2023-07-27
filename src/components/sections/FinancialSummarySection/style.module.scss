@@ -1,8 +1,8 @@
 .section {
   display: flex;
   flex-direction: column;
-  gap: clamp(25px, 5vw, 40px);
-  margin-bottom: 50px;
+  gap: clamp(1.5625rem, 5vw, 2.5rem);
+  margin-bottom: 3.125rem;
 
   @media (min-width: 920px) {
     max-height: 66vh;

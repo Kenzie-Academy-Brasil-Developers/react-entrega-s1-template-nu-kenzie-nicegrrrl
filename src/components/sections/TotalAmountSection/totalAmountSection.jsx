@@ -3,7 +3,6 @@ import styles from "./style.module.scss";
 export const TotalAmountSection = ({ totalAmount }) => {
   return (
     <section>
-      {/* <div className="container"> */}
       <div className={styles.flexBox}>
         <div className={styles.top}>
           <h2 className="title3">Valor total:</h2>
@@ -17,7 +16,6 @@ export const TotalAmountSection = ({ totalAmount }) => {
             })}
           </p>
         </div>
-        {/* </div> */}
       </div>
     </section>
   );

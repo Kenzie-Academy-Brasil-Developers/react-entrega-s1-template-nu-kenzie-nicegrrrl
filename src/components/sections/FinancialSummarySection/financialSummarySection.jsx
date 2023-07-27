@@ -5,8 +5,6 @@ export const FinancialSummarySection = ({
   transactionsList,
   removeTransaction,
 }) => {
-  console.log(transactionsList.length);
-
   return (
     <section className={styles.section}>
       <h2 className="title3">Resumo Financeiro</h2>

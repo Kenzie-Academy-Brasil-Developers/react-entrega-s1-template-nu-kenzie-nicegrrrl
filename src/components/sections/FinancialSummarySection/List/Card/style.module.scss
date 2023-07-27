@@ -5,9 +5,9 @@
 
 .card {
   height: 156px;
-  padding: 12px 20px;
+  padding: 0.75rem 1.25rem;
   background-color: var(--color-grey-4);
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border-left: 4px solid;
 
   @media (min-width: 920px) {
@@ -20,6 +20,11 @@
 
   &.output {
     border-color: var(--color-grey-3);
+  }
+
+  &:hover {
+    transition: all 250ms ease-in-out;
+    background-color: var(--color-grey-3);
   }
 }
 
@@ -37,16 +42,16 @@
 
 .flexDescription {
   @extend %flexColumn;
-  gap: 14px;
+  gap: 0.875rem;
 }
 
 .flexValue {
   @extend %flexColumn;
   align-items: flex-start;
-  gap: 8px;
+  gap: 0.5rem;
 
   p {
-    padding: 10px 0;
+    padding: 0.625rem 0;
   }
 
   @media (min-width: 920px) {
