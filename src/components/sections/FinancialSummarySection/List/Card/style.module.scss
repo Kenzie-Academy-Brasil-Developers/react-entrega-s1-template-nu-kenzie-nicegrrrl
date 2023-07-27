@@ -22,7 +22,6 @@
 .flexBox {
   display: flex;
   flex-direction: column;
-  // justify-content: space-between;
   align-items: flex-start;
 }
 
@@ -33,7 +32,7 @@
 
 .flexValue {
   @extend %flexColumn;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
 
   p {
@@ -53,6 +52,8 @@
   }
 
   .flexValue {
+    align-items: flex-end;
+
     p {
       padding: 0;
     }

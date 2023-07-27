@@ -8,11 +8,13 @@ export const Form = ({ addTransaction }) => {
   const [money, setMoney] = useState("");
   const [category, setCategory] = useState("entrada");
 
-  console.log(category);
-
   const submit = (event) => {
     event.preventDefault();
-    addTransaction({ description, money, category });
+    addTransaction({
+      description: description,
+      money: Number(money),
+      category: category,
+    });
     setDescription("");
     setMoney("");
     setCategory("entrada");

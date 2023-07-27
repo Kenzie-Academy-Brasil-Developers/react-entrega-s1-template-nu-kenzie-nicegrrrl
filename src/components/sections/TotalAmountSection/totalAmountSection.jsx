@@ -1,6 +1,6 @@
 import styles from "./style.module.scss";
 
-export const TotalAmountSection = () => {
+export const TotalAmountSection = ({ totalAmount }) => {
   return (
     <section>
       {/* <div className="container"> */}
@@ -10,7 +10,12 @@ export const TotalAmountSection = () => {
           <span className="bodyTypography">O valor se refere ao saldo</span>
         </div>
         <div>
-          <p className="title3 pink">R$ 8184,00</p>
+          <p className="title3 pink">
+            {totalAmount.toLocaleString("pt-BR", {
+              style: "currency",
+              currency: "BRL",
+            })}
+          </p>
         </div>
         {/* </div> */}
       </div>

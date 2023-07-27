@@ -28,7 +28,12 @@ export const Card = ({
           <span className="bodyTypography">{categories[category]}</span>
         </div>
         <div className={styles.flexValue}>
-          <p className="bodyTypography">{money}</p>
+          <p className="bodyTypography">
+            {money.toLocaleString("pt-BR", {
+              style: "currency",
+              currency: "BRL",
+            })}
+          </p>
           <button
             className="button__delete"
             onClick={() => removeTransaction(id)}
