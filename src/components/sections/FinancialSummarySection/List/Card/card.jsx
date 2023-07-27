@@ -12,16 +12,12 @@ export const Card = ({
     saida: "Saída",
   };
 
-  const getCardStyle = () => {
-    if (category === "entrada") {
-      return `${styles.card} ${styles.input}`;
-    } else {
-      return `${styles.card} ${styles.output}`;
-    }
-  };
-
   return (
-    <li className={getCardStyle()}>
+    <li
+      className={`${styles.card} ${
+        category === "entrada" ? styles.input : styles.output
+      }`}
+    >
       <div className={styles.flexBox}>
         <div className={styles.flexDescription}>
           <h3 className="title3">{description}</h3>
