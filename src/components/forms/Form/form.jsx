@@ -37,6 +37,7 @@ export const Form = ({ addTransaction }) => {
           value={description}
           setValue={setDescription}
           span="Ex: Compra de roupas"
+          required={true}
         />
         <Input
           label="Valor (R$)"
@@ -46,6 +47,7 @@ export const Form = ({ addTransaction }) => {
           value={money}
           setValue={setMoney}
           span="Ex: 1"
+          required={true}
         />
         <Select
           label="Tipo de valor"
