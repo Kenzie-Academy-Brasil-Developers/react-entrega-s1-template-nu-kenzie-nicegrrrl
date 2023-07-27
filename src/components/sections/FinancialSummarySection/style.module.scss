@@ -3,4 +3,9 @@
   flex-direction: column;
   gap: clamp(25px, 5vw, 40px);
   margin-bottom: 50px;
+
+  @media (min-width: 920px) {
+    max-height: 66vh;
+    overflow-y: auto;
+  }
 }

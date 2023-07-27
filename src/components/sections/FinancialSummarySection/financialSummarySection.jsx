@@ -5,13 +5,19 @@ export const FinancialSummarySection = ({
   transactionsList,
   removeTransaction,
 }) => {
+  console.log(transactionsList.length);
+
   return (
     <section className={styles.section}>
       <h2 className="title3">Resumo Financeiro</h2>
-      <List
-        transactionsList={transactionsList}
-        removeTransaction={removeTransaction}
-      />
+      {transactionsList.length > 0 ? (
+        <List
+          transactionsList={transactionsList}
+          removeTransaction={removeTransaction}
+        />
+      ) : (
+        <p className="title2">Você ainda não possui nenhum lançamento</p>
+      )}
     </section>
   );
 };

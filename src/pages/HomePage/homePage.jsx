@@ -30,7 +30,11 @@ export const HomePage = () => {
       <div className={styles.sectionContainer}>
         <div className={styles.top}>
           <FormSection addTransaction={addTransaction} />
-          <TotalAmountSection totalAmount={totalAmount} />
+          {transactionsList.length > 0 ? (
+            <TotalAmountSection totalAmount={totalAmount} />
+          ) : (
+            <></>
+          )}
         </div>
         <div className={styles.detailedInfo}>
           <FinancialSummarySection

@@ -4,7 +4,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 60px;
 }
 
@@ -13,17 +13,16 @@
   display: flex;
   flex-direction: column;
   gap: 18px;
+
+  @media (min-width: 920px) {
+    width: 40%;
+  }
 }
 
 .detailedInfo {
   width: 100%;
-}
 
-@media (min-width: 920px) {
-  .top {
-    width: 40%;
-  }
-  .detailedInfo {
+  @media (min-width: 920px) {
     width: calc(60% - 60px);
   }
 }
